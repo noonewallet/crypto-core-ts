@@ -1,0 +1,31 @@
+.DS_Store
+node_modules
+/dist
+/coverage
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Directories that are not interesting and build artifacts
+/nist/sts-2.1.2/experiments/
+/nist/sts-2.1.2/obj/
+/nist/sts-2.1.2/assess/
+/nist/output
+
