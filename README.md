@@ -1,11 +1,11 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/noonewallet/crypto-core-ts/blob/main/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-web-blue.svg?style=flat)]()
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnoonewallet%2Fcrypto-core-ts%2Fmain%2Fpackage.json&query=%24.version)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnoonewallet%2Fcrypto-core-ts%2Fmain%2Fpackage.json&query=%24.version&label=version)
 
 ![crypto-core-ts](https://github.com/noonewallet/noone-android-core-crypto/assets/111989613/1f062349-24d4-4824-9c00-b8f2724eca51)
 
 # crypto-core-ts
-A set of utilities for generating and verifying mnemonic phrases, seed phrases, and generating deterministic keys.
+A set of utilities for generating and verifying mnemonic phrases, seed phrases, and deterministic key generation.
 
 **Note**: Node version >= 16.15.0
 
@@ -152,7 +152,7 @@ const newMnemonic = generateMnemonicByEntropyLength(entropyLength)
 * [wif](https://github.com/bitcoinjs/wif)
 * [js-big-decimal](https://github.com/royNiladri/js-big-decimal)
 
-## Nist testing
+## NIST testing
 [Documentation](./nist/README.md) for NIST testing.
 
 ## License

@@ -24,7 +24,6 @@ pnpm-debug.log*
 *.sw?
 
 # Directories that are not interesting and build artifacts
-/nist/sts-2.1.2/experiments/
 /nist/sts-2.1.2/obj/
 /nist/sts-2.1.2/assess/
 /nist/output
