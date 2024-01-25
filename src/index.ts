@@ -1,6 +1,7 @@
 export {
   mnemonicToSeed,
   mnemonicToEntropy,
+  entropyToMnemonic,
   hdFromSeed,
   hdFromXprv,
   derive,

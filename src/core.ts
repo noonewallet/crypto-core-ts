@@ -41,6 +41,19 @@ export const mnemonicToEntropy = (mnemonic: string): string => {
 }
 
 /**
+ * Converting an entropy to mnemonic
+ * @param {string} entropy - Mnemonic phrase
+ * @returns {string} Mnemonic phrase
+ */
+export const entropyToMnemonic = (entropy: string): string => {
+  if (!entropy) {
+    throw new CustomError('err_core_entropy')
+  }
+
+  return bip39.entropyToMnemonic(entropy)
+}
+
+/**
  * Converting a seed to hdkey (Hierarchical Deterministic Key)
  * @param {Buffer} seed - Mnemonic seed in Buffer
  * @returns {Object} hdkey object with private and public key
