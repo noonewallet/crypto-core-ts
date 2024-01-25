@@ -151,6 +151,7 @@ const newMnemonic = generateMnemonicByEntropyLength(entropyLength)
 * [hdkey](https://github.com/cryptocoinjs/hdkey)
 * [wif](https://github.com/bitcoinjs/wif)
 * [js-big-decimal](https://github.com/royNiladri/js-big-decimal)
+* [bs58check](https://github.com/bitcoinjs/bs58check)
 
 ## NIST testing
 [Documentation](./nist/README.md) for NIST testing.

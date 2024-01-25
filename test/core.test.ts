@@ -11,6 +11,7 @@ import {
   derive,
 } from '../src'
 import {defaultMnemonicLength} from '../src/config'
+import {xpubConverter} from '../src/utils/xpub-converter'
 
 const testWallet = {
   mnemonic:
@@ -258,5 +259,23 @@ describe('Core tests', () => {
         expect(e.message.includes('err_core_derivation_path')).toBeTruthy()
       }
     }
+  })
+
+  test('It should converts xpub into dgub for DOGE', () => {
+    const xpub =
+      'xpub6DfpWJqHs4GKfAStUUFtaEfHXyoPzQr4XfK5bM5okC9j79aLgxmwSKjxxnYFTC1rEvFtRcdiUk9afR3GqciayqAF4nWM7JynF1pzsCexTnL'
+    const expectedKey =
+      'dgub8tBe64stQ9djqQKFmm4r1KxCnGwu3yzaa7WcAf634QwTfLyoddJJ7NpfKs3EqARKEemmsWL25kMXg9MJQMNKyf1o6Uurdaktbc7caqQ8nRo'
+    const convertedXpub = xpubConverter(xpub, 'dgub')
+    expect(convertedXpub).toEqual(expectedKey)
+  })
+
+  test('It should converts xpub into Ltub for LTC', () => {
+    const xpub =
+      'xpub6EL7aEFyu3vPfsjTY35JRnVoLJJMiifXs16yyHJ2urK9JirhG1vyqCeHoiiKUMyrCh3XuYRExTzCKB73BMxSV2FHrs8FKM6Dr2ZowLEna2Q'
+    const expectedKey =
+      'Ltub2amE2sU1nVEPvF1Q8X5JHec2R6cvUWBfzHJxoN39HM9r36VVv2Rier8jAbEM8mP6nuT7VfonoVdaRGUA6G3tKx2iA11hz2rGLXL9qqUEXSU'
+    const convertedXpub = xpubConverter(xpub, 'Ltub')
+    expect(convertedXpub).toEqual(expectedKey)
   })
 })
